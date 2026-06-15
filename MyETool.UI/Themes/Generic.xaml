@@ -4,6 +4,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Pack://application:,,,/MyETool.UI;component/Components/IconComponent/Theme/IconStyle.xaml" />
+        <ResourceDictionary Source="Pack://application:,,,/MyETool.UI;component/Components/ButtonComponent/Theme/ButtonStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

@@ -1,0 +1,136 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:button="clr-namespace:MyETool.UI.Components.ButtonComponent.Component"
+    xmlns:eui="clr-namespace:MyETool.UI.Components.IconComponent.Component">
+
+    <!--  控件  -->
+    <Style TargetType="button:Button">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="button:Button">
+                    <Grid x:Name="ButtonGridBox"
+                          Width="{Binding ButtonWidth, RelativeSource={RelativeSource TemplatedParent}}"
+                          Height="{Binding ButtonHeight, RelativeSource={RelativeSource TemplatedParent}}">
+                        <Border
+                            x:Name="ButtonBorderBox"
+                            Background="{Binding ButtonBackgroundColor, RelativeSource={RelativeSource TemplatedParent}}"
+                            BorderBrush="{Binding ButtonBorderColor, RelativeSource={RelativeSource TemplatedParent}}"
+                            BorderThickness="{Binding ButtonBorderSize, RelativeSource={RelativeSource TemplatedParent}}"
+                            CornerRadius="{Binding ButtonBorderRadius, RelativeSource={RelativeSource TemplatedParent}}">
+                            <Grid
+                                x:Name="TwoIconAndTextButton"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Visibility="Visible">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition x:Name="TwoIconAndTextButton_LeftIconAndTextSpace" Width="{Binding ButtonLeftIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition x:Name="TwoIconAndTextButton_RightIconAndTextSpace" Width="{Binding ButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Column="0">
+                                    <eui:Icon
+                                        x:Name="TwoIconAndTextButton_Left_Icon"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        IconPath="{Binding ButtonIconPath, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconCode="{Binding ButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconColor="{Binding ButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconSize="{Binding ButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}" />
+                                </Grid>
+                                <Grid Column="2">
+                                    <TextBlock
+                                        x:Name="TwoIconAndTextButton_TextBlock"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        FontSize="{Binding ButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"
+                                        FontWeight="{Binding ButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"
+                                        Foreground="{Binding ButtonTextColor, RelativeSource={RelativeSource TemplatedParent}}"
+                                        Text="{Binding ButtonText, RelativeSource={RelativeSource TemplatedParent}}" />
+                                </Grid>
+                                <Grid Column="4">
+                                    <eui:Icon
+                                        x:Name="TwoIconAndTextButton_Right_Icon"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center"
+                                        IconPath="{Binding ButtonIconPath, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconCode="{Binding ButtonRightIconCode, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconColor="{Binding ButtonRightIconColor, RelativeSource={RelativeSource TemplatedParent}}"
+                                        IconSize="{Binding ButtonRightIconSize, RelativeSource={RelativeSource TemplatedParent}}" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!--  是否自适应大小  -->
+                        <Trigger Property="ButtonIsAutoSize" Value="True">
+                            <Setter TargetName="ButtonGridBox" Property="Width" Value="Auto" />
+                            <Setter TargetName="ButtonGridBox" Property="Height" Value="Auto" />
+                        </Trigger>
+
+                        <!-- 进入按钮触发器 -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonGridBox" Property="Width" Value="{Binding MouseEnterButtonWidth, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonGridBox" Property="Height" Value="{Binding MouseEnterButtonHeight, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="Background" Value="{Binding MouseEnterButtonBackgroundColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderBrush" Value="{Binding MouseEnterButtonBorderColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderThickness" Value="{Binding MouseEnterButtonBorderSize, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="CornerRadius" Value="{Binding MouseEnterButtonBorderRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontSize" Value="{Binding MouseEnterButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="Text" Value="{Binding MouseEnterButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontWeight" Value="{Binding MouseEnterButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconColor" Value="{Binding MouseEnterButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconCode" Value="{Binding MouseEnterButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconSize" Value="{Binding MouseEnterButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconColor" Value="{Binding MouseEnterButtonRightIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconCode" Value="{Binding MouseEnterButtonRightIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconSize" Value="{Binding MouseEnterButtonRightIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_LeftIconAndTextSpace" Property="Width" Value="{Binding  MouseEnterButtonLeftIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_RightIconAndTextSpace" Property="Width" Value="{Binding MouseEnterButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                        </Trigger>
+
+                        <!-- 按下按钮触发器 -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonGridBox" Property="Width" Value="{Binding  MouseClickButtonWidth, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonGridBox" Property="Height" Value="{Binding MouseClickButtonHeight, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="Background" Value="{Binding MouseClickButtonBackgroundColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderBrush" Value="{Binding MouseClickButtonBorderColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderThickness" Value="{Binding MouseClickButtonBorderSize, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="CornerRadius" Value="{Binding MouseClickButtonBorderRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontSize" Value="{Binding MouseClickButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="Text" Value="{Binding MouseClickButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontWeight" Value="{Binding MouseClickButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconColor" Value="{Binding MouseClickButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconCode" Value="{Binding MouseClickButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconSize" Value="{Binding MouseClickButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconColor" Value="{Binding MouseClickButtonRightIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconCode" Value="{Binding MouseClickButtonRightIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconSize" Value="{Binding MouseClickButtonRightIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_LeftIconAndTextSpace" Property="Width" Value="{Binding MouseClickButtonLeftIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_RightIconAndTextSpace" Property="Width" Value="{Binding MouseClickButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                        </Trigger>
+
+                        <!--  按钮禁用触发器  -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="ButtonTextColor" Value="{Binding NoButtonTextColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="MouseEnterButtonTextColor" Value="{Binding NoMouseEnterButtonTextColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="ButtonLeftIconColor" Value="{Binding NoButtonIconColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="ButtonRightIconColor" Value="{Binding NoButtonIconColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="MouseEnterButtonLeftIconColor" Value="{Binding NoMouseEnterIconColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="MouseEnterButtonRightIconColor" Value="{Binding NoMouseEnterIconColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="ButtonBorderColor" Value="{Binding NoButtonBorderColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="MouseEnterButtonBorderColor" Value="{Binding NoMouseEnterButtonBorderColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="ButtonBackgroundColor" Value="{Binding NoButtonBackgroundColor, RelativeSource={RelativeSource Self}}" />
+                            <Setter Property="MouseEnterButtonBackgroundColor" Value="{Binding NoMouseEnterButtonBackgroundColor, RelativeSource={RelativeSource Self}}" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

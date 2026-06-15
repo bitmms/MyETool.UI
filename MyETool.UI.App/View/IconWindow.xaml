@@ -27,13 +27,13 @@
         <icon:Icon Grid.Row="1"
                    IconSize="66"
                    IconColor="#5cb6ff"
-                   IconCode="&#xe658;"
+                   IconCode="&#xe602;"
                    IconPath="pack://application:,,,/MyETool.UI.App;component/Font/iconfont.ttf#iconfont" />
 
         <icon:Icon Grid.Row="2"
                    IconSize="66"
                    IconColor="#5cb6ff"
-                   IconCode="&#xe60a;"
+                   IconCode="&#xe61c;"
                    IconPath="pack://application:,,,/MyETool.UI.App;component/Font/iconfont.ttf#iconfont" />
 
     </Grid>

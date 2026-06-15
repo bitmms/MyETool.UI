@@ -1,0 +1,81 @@
+﻿<Window x:Class="MyETool.UI.App.View.ButtonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:button="clr-namespace:MyETool.UI.Components.ButtonComponent.Component;assembly=MyETool.UI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ButtonWindow"
+        Height="450"
+        Width="800">
+
+
+    <Grid>
+
+        <button:Button
+            ButtonIsAutoSize="False"
+
+            ButtonTextWeight="Normal"
+            ButtonBorderRadius="5"
+            ButtonWidth="200"
+            ButtonHeight="50"
+            ButtonBorderColor="Pink"
+            ButtonBorderSize="5"
+            ButtonBackgroundColor="Black"
+            ButtonTextColor="White"
+            ButtonLeftIconColor="Red"
+            ButtonRightIconColor="Green"
+            ButtonText="这是按钮"
+            ButtonTextSize="14"
+            ButtonLeftIconSize="12"
+            ButtonRightIconSize="18"
+            ButtonLeftIconAndTextSpace="5"
+            ButtonRightIconAndTextSpace="15"
+            ButtonLeftIconCode="&#xe617;"
+            ButtonRightIconCode="&#xe603;"
+
+            MouseEnterButtonTextWeight="Black"
+            MouseEnterButtonBorderRadius="0"
+            MouseEnterButtonWidth="250"
+            MouseEnterButtonHeight="80"
+            MouseEnterButtonBorderColor="Red"
+            MouseEnterButtonBorderSize="10"
+            MouseEnterButtonBackgroundColor="SkyBlue"
+            MouseEnterButtonTextColor="SkyBlue"
+            MouseEnterButtonLeftIconColor="Green"
+            MouseEnterButtonRightIconColor="Red"
+            MouseEnterButtonText="进入按钮"
+            MouseEnterButtonTextSize="20"
+            MouseEnterButtonLeftIconSize="18"
+            MouseEnterButtonRightIconSize="12"
+            MouseEnterButtonLeftIconAndTextSpace="15"
+            MouseEnterButtonRightIconAndTextSpace="5"
+            MouseEnterButtonLeftIconCode="&#xe608;"
+            MouseEnterButtonRightIconCode="&#xe602;"
+
+            MouseClickButtonTextWeight="Light"
+            MouseClickButtonBorderRadius="15"
+            MouseClickButtonWidth="300"
+            MouseClickButtonHeight="120"
+            MouseClickButtonBorderColor="Red"
+            MouseClickButtonBorderSize="0"
+            MouseClickButtonBackgroundColor="Green"
+            MouseClickButtonTextColor="Green"
+            MouseClickButtonLeftIconColor="Yellow"
+            MouseClickButtonRightIconColor="Red"
+            MouseClickButtonText="点击按钮"
+            MouseClickButtonTextSize="12"
+            MouseClickButtonLeftIconSize="12"
+            MouseClickButtonRightIconSize="20"
+            MouseClickButtonLeftIconAndTextSpace="0"
+            MouseClickButtonRightIconAndTextSpace="0"
+            MouseClickButtonLeftIconCode="&#xe7e5;"
+            MouseClickButtonRightIconCode="&#xe7e5;"
+
+            ButtonIconPath="pack://application:,,,/MyETool.UI.App;component/Font/iconfont.ttf#iconfont" />
+
+    </Grid>
+
+
+</Window>

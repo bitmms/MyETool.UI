@@ -8,7 +8,8 @@ namespace MyETool.UI.App
         private void App_OnStartup(object sender, StartupEventArgs e)
         {
             // new MainWindow().ShowDialog();
-            new IconWindow().ShowDialog();
+            // new IconWindow().ShowDialog();
+            new ButtonWindow().ShowDialog();
         }
     }
 }

@@ -51,6 +51,9 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
+        <Compile Include="View\ButtonWindow.xaml.cs">
+          <DependentUpon>ButtonWindow.xaml</DependentUpon>
+        </Compile>
         <Compile Include="View\IconWindow.xaml.cs">
           <DependentUpon>IconWindow.xaml</DependentUpon>
         </Compile>
@@ -61,6 +64,7 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Page Include="View\ButtonWindow.xaml" />
         <Page Include="View\IconWindow.xaml" />
         <Page Include="View\MainWindow.xaml" />
     </ItemGroup>
@@ -82,13 +86,13 @@
         <None Include="App.config"/>
     </ItemGroup>
     <ItemGroup>
-      <Resource Include="Font\iconfont.ttf" />
-    </ItemGroup>
-    <ItemGroup>
       <ProjectReference Include="..\MyETool.UI\MyETool.UI.csproj">
         <Project>{2bcd77a9-6325-476f-9518-9a92e77c5903}</Project>
         <Name>MyETool.UI</Name>
       </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Resource Include="Font\iconfont.ttf" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
