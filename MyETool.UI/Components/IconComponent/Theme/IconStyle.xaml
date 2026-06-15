@@ -1,0 +1,27 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:component="clr-namespace:MyETool.UI.Components.IconComponent.Component">
+
+    <Style TargetType="component:Icon">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="component:Icon">
+                    <Border
+                        Width="{Binding IconSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Height="{Binding IconSize, RelativeSource={RelativeSource TemplatedParent}}"
+                        Background="Transparent">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontFamily="{Binding IconPath, RelativeSource={RelativeSource TemplatedParent}}"
+                            FontSize="{Binding IconSize, RelativeSource={RelativeSource TemplatedParent}}"
+                            Foreground="{Binding IconColor, RelativeSource={RelativeSource TemplatedParent}}"
+                            Text="{Binding IconCode, RelativeSource={RelativeSource TemplatedParent}}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
