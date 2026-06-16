@@ -26,74 +26,92 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         public static readonly DependencyProperty ButtonWidthProperty = DependencyProperty.Register(nameof(ButtonWidth), typeof(string), typeof(Button), new PropertyMetadata("100"));
         public static readonly DependencyProperty MouseEnterButtonWidthProperty = DependencyProperty.Register(nameof(MouseEnterButtonWidth), typeof(string), typeof(Button), new PropertyMetadata("100"));
         public static readonly DependencyProperty MouseClickButtonWidthProperty = DependencyProperty.Register(nameof(MouseClickButtonWidth), typeof(string), typeof(Button), new PropertyMetadata("100"));
+        public static readonly DependencyProperty DisableButtonWidthProperty = DependencyProperty.Register(nameof(DisableButtonWidth), typeof(string), typeof(Button), new PropertyMetadata("100"));
 
         public static readonly DependencyProperty ButtonHeightProperty = DependencyProperty.Register(nameof(ButtonHeight), typeof(string), typeof(Button), new PropertyMetadata("45"));
         public static readonly DependencyProperty MouseEnterButtonHeightProperty = DependencyProperty.Register(nameof(MouseEnterButtonHeight), typeof(string), typeof(Button), new PropertyMetadata("45"));
         public static readonly DependencyProperty MouseClickButtonHeightProperty = DependencyProperty.Register(nameof(MouseClickButtonHeight), typeof(string), typeof(Button), new PropertyMetadata("45"));
+        public static readonly DependencyProperty DisableButtonHeightProperty = DependencyProperty.Register(nameof(DisableButtonHeight), typeof(string), typeof(Button), new PropertyMetadata("45"));
 
         public static readonly DependencyProperty ButtonBorderSizeProperty = DependencyProperty.Register(nameof(ButtonBorderSize), typeof(int), typeof(Button), new PropertyMetadata(5));
         public static readonly DependencyProperty MouseEnterButtonBorderSizeProperty = DependencyProperty.Register(nameof(MouseEnterButtonBorderSize), typeof(int), typeof(Button), new PropertyMetadata(5));
         public static readonly DependencyProperty MouseClickButtonBorderSizeProperty = DependencyProperty.Register(nameof(MouseClickButtonBorderSize), typeof(int), typeof(Button), new PropertyMetadata(5));
+        public static readonly DependencyProperty DisableButtonBorderSizeProperty = DependencyProperty.Register(nameof(DisableButtonBorderSize), typeof(int), typeof(Button), new PropertyMetadata(5));
 
         public static readonly DependencyProperty ButtonBorderRadiusProperty = DependencyProperty.Register(nameof(ButtonBorderRadius), typeof(int), typeof(Button), new PropertyMetadata(5));
         public static readonly DependencyProperty MouseEnterButtonBorderRadiusProperty = DependencyProperty.Register(nameof(MouseEnterButtonBorderRadius), typeof(int), typeof(Button), new PropertyMetadata(5));
         public static readonly DependencyProperty MouseClickButtonBorderRadiusProperty = DependencyProperty.Register(nameof(MouseClickButtonBorderRadius), typeof(int), typeof(Button), new PropertyMetadata(5));
+        public static readonly DependencyProperty DisableButtonBorderRadiusProperty = DependencyProperty.Register(nameof(DisableButtonBorderRadius), typeof(int), typeof(Button), new PropertyMetadata(5));
 
         public static readonly DependencyProperty ButtonBorderColorProperty = DependencyProperty.Register(nameof(ButtonBorderColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty MouseEnterButtonBorderColorProperty = DependencyProperty.Register(nameof(MouseEnterButtonBorderColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.White));
         public static readonly DependencyProperty MouseClickButtonBorderColorProperty = DependencyProperty.Register(nameof(MouseClickButtonBorderColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
+        public static readonly DependencyProperty DisableButtonBorderColorProperty = DependencyProperty.Register(nameof(DisableButtonBorderColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
 
         public static readonly DependencyProperty ButtonBackgroundColorProperty = DependencyProperty.Register(nameof(ButtonBackgroundColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Red));
         public static readonly DependencyProperty MouseEnterButtonBackgroundColorProperty = DependencyProperty.Register(nameof(MouseEnterButtonBackgroundColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.SkyBlue));
         public static readonly DependencyProperty MouseClickButtonBackgroundColorProperty = DependencyProperty.Register(nameof(MouseClickButtonBackgroundColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Orange));
+        public static readonly DependencyProperty DisableButtonBackgroundColorProperty = DependencyProperty.Register(nameof(DisableButtonBackgroundColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Orange));
 
         public static readonly DependencyProperty ButtonTextProperty = DependencyProperty.Register(nameof(ButtonText), typeof(string), typeof(Button), new PropertyMetadata("这是按钮"));
         public static readonly DependencyProperty MouseEnterButtonTextProperty = DependencyProperty.Register(nameof(MouseEnterButtonText), typeof(string), typeof(Button), new PropertyMetadata("这是按钮"));
         public static readonly DependencyProperty MouseClickButtonTextProperty = DependencyProperty.Register(nameof(MouseClickButtonText), typeof(string), typeof(Button), new PropertyMetadata("这是按钮"));
+        public static readonly DependencyProperty DisableButtonTextProperty = DependencyProperty.Register(nameof(DisableButtonText), typeof(string), typeof(Button), new PropertyMetadata("这是按钮"));
 
         public static readonly DependencyProperty ButtonTextSizeProperty = DependencyProperty.Register(nameof(ButtonTextSize), typeof(int), typeof(Button), new PropertyMetadata(14));
         public static readonly DependencyProperty MouseEnterButtonTextSizeProperty = DependencyProperty.Register(nameof(MouseEnterButtonTextSize), typeof(int), typeof(Button), new PropertyMetadata(14));
         public static readonly DependencyProperty MouseClickButtonTextSizeProperty = DependencyProperty.Register(nameof(MouseClickButtonTextSize), typeof(int), typeof(Button), new PropertyMetadata(14));
+        public static readonly DependencyProperty DisableButtonTextSizeProperty = DependencyProperty.Register(nameof(DisableButtonTextSize), typeof(int), typeof(Button), new PropertyMetadata(14));
 
         public static readonly DependencyProperty ButtonTextColorProperty = DependencyProperty.Register(nameof(ButtonTextColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty MouseEnterButtonTextColorProperty = DependencyProperty.Register(nameof(MouseEnterButtonTextColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.White));
         public static readonly DependencyProperty MouseClickButtonTextColorProperty = DependencyProperty.Register(nameof(MouseClickButtonTextColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
+        public static readonly DependencyProperty DisableButtonTextColorProperty = DependencyProperty.Register(nameof(DisableButtonTextColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
 
         public static readonly DependencyProperty ButtonTextWeightProperty = DependencyProperty.Register(nameof(ButtonTextWeight), typeof(FontWeight), typeof(Button), new PropertyMetadata(FontWeights.Normal));
         public static readonly DependencyProperty MouseEnterButtonTextWeightProperty = DependencyProperty.Register(nameof(MouseEnterButtonTextWeight), typeof(FontWeight), typeof(Button), new PropertyMetadata(FontWeights.Normal));
         public static readonly DependencyProperty MouseClickButtonTextWeightProperty = DependencyProperty.Register(nameof(MouseClickButtonTextWeight), typeof(FontWeight), typeof(Button), new PropertyMetadata(FontWeights.Normal));
+        public static readonly DependencyProperty DisableButtonTextWeightProperty = DependencyProperty.Register(nameof(DisableButtonTextWeight), typeof(FontWeight), typeof(Button), new PropertyMetadata(FontWeights.Normal));
 
         public static readonly DependencyProperty ButtonLeftIconCodeProperty = DependencyProperty.Register(nameof(ButtonLeftIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
         public static readonly DependencyProperty MouseEnterButtonLeftIconCodeProperty = DependencyProperty.Register(nameof(MouseEnterButtonLeftIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
         public static readonly DependencyProperty MouseClickButtonLeftIconCodeProperty = DependencyProperty.Register(nameof(MouseClickButtonLeftIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
+        public static readonly DependencyProperty DisableButtonLeftIconCodeProperty = DependencyProperty.Register(nameof(DisableButtonLeftIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
 
         public static readonly DependencyProperty ButtonLeftIconSizeProperty = DependencyProperty.Register(nameof(ButtonLeftIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
         public static readonly DependencyProperty MouseEnterButtonLeftIconSizeProperty = DependencyProperty.Register(nameof(MouseEnterButtonLeftIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
         public static readonly DependencyProperty MouseClickButtonLeftIconSizeProperty = DependencyProperty.Register(nameof(MouseClickButtonLeftIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
+        public static readonly DependencyProperty DisableButtonLeftIconSizeProperty = DependencyProperty.Register(nameof(DisableButtonLeftIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
 
         public static readonly DependencyProperty ButtonLeftIconColorProperty = DependencyProperty.Register(nameof(ButtonLeftIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty MouseEnterButtonLeftIconColorProperty = DependencyProperty.Register(nameof(MouseEnterButtonLeftIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.White));
         public static readonly DependencyProperty MouseClickButtonLeftIconColorProperty = DependencyProperty.Register(nameof(MouseClickButtonLeftIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
+        public static readonly DependencyProperty DisableButtonLeftIconColorProperty = DependencyProperty.Register(nameof(DisableButtonLeftIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
 
         public static readonly DependencyProperty ButtonLeftIconAndTextSpaceProperty = DependencyProperty.Register(nameof(ButtonLeftIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
         public static readonly DependencyProperty MouseEnterButtonLeftIconAndTextSpaceProperty = DependencyProperty.Register(nameof(MouseEnterButtonLeftIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
         public static readonly DependencyProperty MouseClickButtonLeftIconAndTextSpaceProperty = DependencyProperty.Register(nameof(MouseClickButtonLeftIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
+        public static readonly DependencyProperty DisableButtonLeftIconAndTextSpaceProperty = DependencyProperty.Register(nameof(DisableButtonLeftIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
 
         public static readonly DependencyProperty ButtonRightIconCodeProperty = DependencyProperty.Register(nameof(ButtonRightIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
-        public static readonly DependencyProperty MouseClickButtonRightIconCodeProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
         public static readonly DependencyProperty MouseEnterButtonRightIconCodeProperty = DependencyProperty.Register(nameof(MouseEnterButtonRightIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
+        public static readonly DependencyProperty MouseClickButtonRightIconCodeProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
+        public static readonly DependencyProperty DisableButtonRightIconCodeProperty = DependencyProperty.Register(nameof(DisableButtonRightIconCode), typeof(string), typeof(Button), new PropertyMetadata("〇"));
 
         public static readonly DependencyProperty ButtonRightIconSizeProperty = DependencyProperty.Register(nameof(ButtonRightIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
-        public static readonly DependencyProperty MouseClickButtonRightIconSizeProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
         public static readonly DependencyProperty MouseEnterButtonRightIconSizeProperty = DependencyProperty.Register(nameof(MouseEnterButtonRightIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
+        public static readonly DependencyProperty MouseClickButtonRightIconSizeProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
+        public static readonly DependencyProperty DisableButtonRightIconSizeProperty = DependencyProperty.Register(nameof(DisableButtonRightIconSize), typeof(int), typeof(Button), new PropertyMetadata(18));
 
         public static readonly DependencyProperty ButtonRightIconColorProperty = DependencyProperty.Register(nameof(ButtonRightIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Black));
         public static readonly DependencyProperty MouseEnterButtonRightIconColorProperty = DependencyProperty.Register(nameof(MouseEnterButtonRightIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.White));
         public static readonly DependencyProperty MouseClickButtonRightIconColorProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
+        public static readonly DependencyProperty DisableButtonRightIconColorProperty = DependencyProperty.Register(nameof(DisableButtonRightIconColor), typeof(Brush), typeof(Button), new PropertyMetadata(Brushes.Green));
 
         public static readonly DependencyProperty ButtonRightIconAndTextSpaceProperty = DependencyProperty.Register(nameof(ButtonRightIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
         public static readonly DependencyProperty MouseEnterButtonRightIconAndTextSpaceProperty = DependencyProperty.Register(nameof(MouseEnterButtonRightIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
         public static readonly DependencyProperty MouseClickButtonRightIconAndTextSpaceProperty = DependencyProperty.Register(nameof(MouseClickButtonRightIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
+        public static readonly DependencyProperty DisableButtonRightIconAndTextSpaceProperty = DependencyProperty.Register(nameof(DisableButtonRightIconAndTextSpace), typeof(int), typeof(Button), new PropertyMetadata(10));
 
         #endregion
 
@@ -135,6 +153,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonWidthProperty, value);
         }
 
+        public string DisableButtonWidth
+        {
+            get => (string)GetValue(DisableButtonWidthProperty);
+            set => SetValue(DisableButtonWidthProperty, value);
+        }
+
         public string ButtonHeight
         {
             get => (string)GetValue(ButtonHeightProperty);
@@ -151,6 +175,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (string)GetValue(MouseClickButtonHeightProperty);
             set => SetValue(MouseClickButtonHeightProperty, value);
+        }
+
+        public string DisableButtonHeight
+        {
+            get => (string)GetValue(DisableButtonHeightProperty);
+            set => SetValue(DisableButtonHeightProperty, value);
         }
 
         public int ButtonBorderSize
@@ -171,6 +201,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonBorderSizeProperty, value);
         }
 
+        public int DisableButtonBorderSize
+        {
+            get => (int)GetValue(DisableButtonBorderSizeProperty);
+            set => SetValue(DisableButtonBorderSizeProperty, value);
+        }
+
         public int ButtonBorderRadius
         {
             get => (int)GetValue(ButtonBorderRadiusProperty);
@@ -187,6 +223,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonBorderRadiusProperty);
             set => SetValue(MouseClickButtonBorderRadiusProperty, value);
+        }
+
+        public int DisableButtonBorderRadius
+        {
+            get => (int)GetValue(DisableButtonBorderRadiusProperty);
+            set => SetValue(DisableButtonBorderRadiusProperty, value);
         }
 
         public Brush ButtonBorderColor
@@ -207,6 +249,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonBorderColorProperty, value);
         }
 
+        public Brush DisableButtonBorderColor
+        {
+            get => (Brush)GetValue(DisableButtonBorderColorProperty);
+            set => SetValue(DisableButtonBorderColorProperty, value);
+        }
+
         public Brush ButtonBackgroundColor
         {
             get => (Brush)GetValue(ButtonBackgroundColorProperty);
@@ -223,6 +271,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (Brush)GetValue(MouseClickButtonBackgroundColorProperty);
             set => SetValue(MouseClickButtonBackgroundColorProperty, value);
+        }
+
+        public Brush DisableButtonBackgroundColor
+        {
+            get => (Brush)GetValue(DisableButtonBackgroundColorProperty);
+            set => SetValue(DisableButtonBackgroundColorProperty, value);
         }
 
         public string ButtonText
@@ -243,6 +297,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonTextProperty, value);
         }
 
+        public string DisableButtonText
+        {
+            get => (string)GetValue(DisableButtonTextProperty);
+            set => SetValue(DisableButtonTextProperty, value);
+        }
+
         public int ButtonTextSize
         {
             get => (int)GetValue(ButtonTextSizeProperty);
@@ -259,6 +319,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonTextSizeProperty);
             set => SetValue(MouseClickButtonTextSizeProperty, value);
+        }
+
+        public int DisableButtonTextSize
+        {
+            get => (int)GetValue(DisableButtonTextSizeProperty);
+            set => SetValue(DisableButtonTextSizeProperty, value);
         }
 
         public Brush ButtonTextColor
@@ -279,6 +345,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonTextColorProperty, value);
         }
 
+        public Brush DisableButtonTextColor
+        {
+            get => (Brush)GetValue(DisableButtonTextColorProperty);
+            set => SetValue(DisableButtonTextColorProperty, value);
+        }
+
         public FontWeight ButtonTextWeight
         {
             get => (FontWeight)GetValue(ButtonTextWeightProperty);
@@ -295,6 +367,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (FontWeight)GetValue(MouseClickButtonTextWeightProperty);
             set => SetValue(MouseClickButtonTextWeightProperty, value);
+        }
+
+        public FontWeight DisableButtonTextWeight
+        {
+            get => (FontWeight)GetValue(DisableButtonTextWeightProperty);
+            set => SetValue(DisableButtonTextWeightProperty, value);
         }
 
         public string ButtonLeftIconCode
@@ -315,6 +393,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonLeftIconCodeProperty, value);
         }
 
+        public string DisableButtonLeftIconCode
+        {
+            get => (string)GetValue(DisableButtonLeftIconCodeProperty);
+            set => SetValue(DisableButtonLeftIconCodeProperty, value);
+        }
+
         public int ButtonLeftIconSize
         {
             get => (int)GetValue(ButtonLeftIconSizeProperty);
@@ -331,6 +415,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonLeftIconSizeProperty);
             set => SetValue(MouseClickButtonLeftIconSizeProperty, value);
+        }
+
+        public int DisableButtonLeftIconSize
+        {
+            get => (int)GetValue(DisableButtonLeftIconSizeProperty);
+            set => SetValue(DisableButtonLeftIconSizeProperty, value);
         }
 
         public Brush ButtonLeftIconColor
@@ -351,6 +441,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonLeftIconColorProperty, value);
         }
 
+        public Brush DisableButtonLeftIconColor
+        {
+            get => (Brush)GetValue(DisableButtonLeftIconColorProperty);
+            set => SetValue(DisableButtonLeftIconColorProperty, value);
+        }
+
         public int ButtonLeftIconAndTextSpace
         {
             get => (int)GetValue(ButtonLeftIconAndTextSpaceProperty);
@@ -367,6 +463,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonLeftIconAndTextSpaceProperty);
             set => SetValue(MouseClickButtonLeftIconAndTextSpaceProperty, value);
+        }
+
+        public int DisableButtonLeftIconAndTextSpace
+        {
+            get => (int)GetValue(DisableButtonLeftIconAndTextSpaceProperty);
+            set => SetValue(DisableButtonLeftIconAndTextSpaceProperty, value);
         }
 
         public string ButtonRightIconCode
@@ -387,6 +489,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonRightIconCodeProperty, value);
         }
 
+        public string DisableButtonRightIconCode
+        {
+            get => (string)GetValue(DisableButtonRightIconCodeProperty);
+            set => SetValue(DisableButtonRightIconCodeProperty, value);
+        }
+
         public int ButtonRightIconSize
         {
             get => (int)GetValue(ButtonRightIconSizeProperty);
@@ -403,6 +511,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonRightIconSizeProperty);
             set => SetValue(MouseClickButtonRightIconSizeProperty, value);
+        }
+
+        public int DisableButtonRightIconSize
+        {
+            get => (int)GetValue(DisableButtonRightIconSizeProperty);
+            set => SetValue(DisableButtonRightIconSizeProperty, value);
         }
 
         public Brush ButtonRightIconColor
@@ -423,6 +537,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
             set => SetValue(MouseClickButtonRightIconColorProperty, value);
         }
 
+        public Brush DisableButtonRightIconColor
+        {
+            get => (Brush)GetValue(DisableButtonRightIconColorProperty);
+            set => SetValue(DisableButtonRightIconColorProperty, value);
+        }
+
         public int ButtonRightIconAndTextSpace
         {
             get => (int)GetValue(ButtonRightIconAndTextSpaceProperty);
@@ -439,6 +559,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         {
             get => (int)GetValue(MouseClickButtonRightIconAndTextSpaceProperty);
             set => SetValue(MouseClickButtonRightIconAndTextSpaceProperty, value);
+        }
+
+        public int DisableButtonRightIconAndTextSpace
+        {
+            get => (int)GetValue(DisableButtonRightIconAndTextSpaceProperty);
+            set => SetValue(DisableButtonRightIconAndTextSpaceProperty, value);
         }
 
         #endregion

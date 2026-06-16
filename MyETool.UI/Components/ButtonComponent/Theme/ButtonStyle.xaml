@@ -4,8 +4,6 @@
     xmlns:button="clr-namespace:MyETool.UI.Components.ButtonComponent.Component"
     xmlns:icon="clr-namespace:MyETool.UI.Components.IconComponent.Component">
 
-
-    <!--  控件  -->
     <Style TargetType="button:Button">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Template">
@@ -316,12 +314,61 @@
                             <Setter TargetName="TwoIconAndTextButton_RightIconAndTextSpace" Property="Width" Value="{Binding MouseClickButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
                         </Trigger>
 
+                        <!-- 禁用按钮触发器 -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonGridBox" Property="Width" Value="{Binding  DisableButtonWidth, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonGridBox" Property="Height" Value="{Binding DisableButtonHeight, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderThickness" Value="{Binding DisableButtonBorderSize, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="CornerRadius" Value="{Binding DisableButtonBorderRadius, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="BorderBrush" Value="{Binding DisableButtonBorderColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="ButtonBorderBox" Property="Background" Value="{Binding DisableButtonBackgroundColor, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                            <Setter TargetName="IconButton_Left_Icon" Property="IconCode" Value="{Binding DisableButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="IconButton_Left_Icon" Property="IconSize" Value="{Binding DisableButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="IconButton_Left_Icon" Property="IconColor" Value="{Binding DisableButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+
+                            <Setter TargetName="TextButton_TextBlock" Property="Text" Value="{Binding DisableButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TextButton_TextBlock" Property="FontSize" Value="{Binding DisableButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TextButton_TextBlock" Property="Foreground" Value="{Binding DisableButtonTextColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TextButton_TextBlock" Property="FontWeight" Value="{Binding DisableButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+
+                            <Setter TargetName="LeftIconAndTextButton_Left_Icon" Property="IconCode" Value="{Binding DisableButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_Left_Icon" Property="IconSize" Value="{Binding DisableButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_Left_Icon" Property="IconColor" Value="{Binding DisableButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_LeftIconAndTextSpace" Property="Width" Value="{Binding DisableButtonLeftIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_TextBlock" Property="Text" Value="{Binding DisableButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_TextBlock" Property="FontSize" Value="{Binding DisableButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_TextBlock" Property="Foreground" Value="{Binding DisableButtonTextColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="LeftIconAndTextButton_TextBlock" Property="FontWeight" Value="{Binding DisableButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+
+                            <Setter TargetName="RightIconAndTextButton_TextBlock" Property="Text" Value="{Binding DisableButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_TextBlock" Property="FontSize" Value="{Binding DisableButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_TextBlock" Property="Foreground" Value="{Binding DisableButtonTextColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_TextBlock" Property="FontWeight" Value="{Binding DisableButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_RightIconAndTextSpace" Property="Width" Value="{Binding DisableButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_Right_Icon" Property="IconCode" Value="{Binding DisableButtonRightIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_Right_Icon" Property="IconSize" Value="{Binding DisableButtonRightIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="RightIconAndTextButton_Right_Icon" Property="IconColor" Value="{Binding DisableButtonRightIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="Text" Value="{Binding DisableButtonText, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontSize" Value="{Binding DisableButtonTextSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="Foreground" Value="{Binding DisableButtonTextColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_TextBlock" Property="FontWeight" Value="{Binding DisableButtonTextWeight, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconCode" Value="{Binding DisableButtonLeftIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconSize" Value="{Binding DisableButtonLeftIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Left_Icon" Property="IconColor" Value="{Binding DisableButtonLeftIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_LeftIconAndTextSpace" Property="Width" Value="{Binding DisableButtonLeftIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconCode" Value="{Binding DisableButtonRightIconCode, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconSize" Value="{Binding DisableButtonRightIconSize, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_Right_Icon" Property="IconColor" Value="{Binding DisableButtonRightIconColor, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                            <Setter TargetName="TwoIconAndTextButton_RightIconAndTextSpace" Property="Width" Value="{Binding DisableButtonRightIconAndTextSpace, RelativeSource={RelativeSource TemplatedParent}}"></Setter>
+                        </Trigger>
+
                     </ControlTemplate.Triggers>
 
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
 
 </ResourceDictionary>
