@@ -43,6 +43,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Components\ButtonComponent\Component\Button.cs" />
+        <Compile Include="Components\ButtonComponent\Component\ButtonType.cs" />
         <Compile Include="Components\IconComponent\Component\Icon.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

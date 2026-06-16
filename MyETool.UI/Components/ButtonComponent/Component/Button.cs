@@ -17,6 +17,8 @@ namespace MyETool.UI.Components.ButtonComponent.Component
 
         #region 2. 注册依赖属性
 
+        public static readonly DependencyProperty ButtonTypeProperty = DependencyProperty.Register(nameof(ButtonType), typeof(ButtonType), typeof(Button), new PropertyMetadata(ButtonType.TwoIconAndTextButton));
+
         private const string IconPath = "pack://application:,,,/MyETool.UI;component/Components/IconComponent/Font/iconfont.ttf#iconfont";
         public static readonly DependencyProperty ButtonIconPathProperty = DependencyProperty.Register(name: nameof(ButtonIconPath), propertyType: typeof(string), ownerType: typeof(Button), typeMetadata: new PropertyMetadata(IconPath));
         public static readonly DependencyProperty ButtonIsAutoSizeProperty = DependencyProperty.Register(nameof(ButtonIsAutoSize), typeof(bool), typeof(Button), new PropertyMetadata(false));
@@ -96,6 +98,12 @@ namespace MyETool.UI.Components.ButtonComponent.Component
         #endregion
 
         #region 3. 依赖属性的包装器
+
+        public ButtonType ButtonType
+        {
+            get => (ButtonType)GetValue(ButtonTypeProperty);
+            set => SetValue(ButtonTypeProperty, value);
+        }
 
         public string ButtonIconPath
         {
