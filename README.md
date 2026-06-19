@@ -75,3 +75,24 @@
 >
 > * 生成操作：Resource
 > * 复制到输出目录：不复制
+
+## 3. 打包流程
+
+```bash
+# 验证
+MSBuild /version
+nuget help
+
+# 清理
+MSBuild MyETool.UI.sln /p:Configuration=Release /t:Clean
+
+# 编译组件库和桌面程序
+MSBuild MyETool.UI.sln /p:Configuration=Release /t:Rebuild
+
+# 组件库打包
+nuget pack MyETool.UI\MyETool.UI.csproj -Properties Configuration=Release -OutputDirectory .\MyETool.UI\bin\Release\nupkg
+
+# 桌面程序打包
+MSBuild MyETool.UI.App\MyETool.UI.App.csproj /p:Configuration=Release /t:Publish
+```
+
